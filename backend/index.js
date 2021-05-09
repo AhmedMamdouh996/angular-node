@@ -3,8 +3,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const studentRouter = require("./routes/students");
 
-const con = mongoose.connect(
-  "mongodb://localhost:27017/studentApp",
+const uri = process.env.MONGODB_URI;
+
+// const uri = "mongodb+srv://ahmed:dhMgeb$1943@cluster0.rmnbw.mongodb.net/studentsApp?retryWrites=true&w=majority";
+const con = mongoose.connect(uri,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
