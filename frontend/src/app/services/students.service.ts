@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class StudentsService {
-  readonly baseURL: string = 'http://localhost:3000/students/';
+  readonly baseURL: string =
+    'https://students-app-mean.herokuapp.com/students/';
   constructor(private studentClient: HttpClient) {}
 
   getStudents() {
